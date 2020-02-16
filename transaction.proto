@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package transaction;
+
+service Transactor {
+  rpc NodeVersion(VersionRequest) returns (VersionResponse) {}
+  rpc AddTransaction(TransactionRequest) returns (TransactionResponse) {}
+  rpc DeleteTransaction(DeleteRequest) returns (TransactionResponse) {}
+  rpc AddTag(TagRequest) returns (TransactionResponse) {}
+  rpc DeleteTag(DeleteTagRequest) returns (TransactionResponse) {}
+  rpc GetTB(TBRequest) returns (TBResponse) {}
+}
+
+message LineItem {
+  string accountname = 1;
+  string description = 2;
+  int64 amount = 3;
+}
+
+message TransactionRequest {
+    string date = 1;
+    string description = 2;
+    repeated LineItem lines = 3;
+    string signature = 4;
+}
+
+message DeleteRequest {
+    string identifier = 1;
+    string signature = 2;
+}
+
+message TransactionResponse {
+    string message = 1;
+}
+
+message TagRequest {
+    string account = 1;
+    string tag = 2;
+    string signature = 3;
+}
+
+message DeleteTagRequest {
+    string account = 1;
+    string tag = 2;
+    string signature = 3;
+}
+
+message TBLine {
+  string accountname = 1;
+  repeated string tags = 2;
+  int64 amount = 3;
+}
+
+message TBRequest {
+    string date = 1;
+}
+
+message TBResponse {
+    repeated TBLine lines = 1;
+}
+
+message VersionRequest {
+    string message = 1;
+}
+
+message VersionResponse {
+    string message = 1;
+}
