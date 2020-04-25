@@ -1,5 +1,12 @@
 ### Python client for godbledger
 
+**files**
+transaction.proto -> from the GoDBLedger Source, provides the GRPC protocol definition
+transaction_pb2.py -> generated python code from GRPC
+transaction_pb2_grpc.py -> generated python code from GRPC
+sendtransaction -> example script to send a transaction to GoDBLedger
+gettrialbalance -> example script to obtain the trial balance from GoDBLedger
+
 To get started with a python script you will need a copy of the protobuffers.
 
 ```
