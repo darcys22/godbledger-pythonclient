@@ -5,127 +5,284 @@ import transaction_pb2 as transaction__pb2
 
 
 class TransactorStub(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def __init__(self, channel):
-    """Constructor.
+    def __init__(self, channel):
+        """Constructor.
 
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.NodeVersion = channel.unary_unary(
-        '/transaction.Transactor/NodeVersion',
-        request_serializer=transaction__pb2.VersionRequest.SerializeToString,
-        response_deserializer=transaction__pb2.VersionResponse.FromString,
-        )
-    self.AddTransaction = channel.unary_unary(
-        '/transaction.Transactor/AddTransaction',
-        request_serializer=transaction__pb2.TransactionRequest.SerializeToString,
-        response_deserializer=transaction__pb2.TransactionResponse.FromString,
-        )
-    self.DeleteTransaction = channel.unary_unary(
-        '/transaction.Transactor/DeleteTransaction',
-        request_serializer=transaction__pb2.DeleteRequest.SerializeToString,
-        response_deserializer=transaction__pb2.TransactionResponse.FromString,
-        )
-    self.AddTag = channel.unary_unary(
-        '/transaction.Transactor/AddTag',
-        request_serializer=transaction__pb2.TagRequest.SerializeToString,
-        response_deserializer=transaction__pb2.TransactionResponse.FromString,
-        )
-    self.DeleteTag = channel.unary_unary(
-        '/transaction.Transactor/DeleteTag',
-        request_serializer=transaction__pb2.DeleteTagRequest.SerializeToString,
-        response_deserializer=transaction__pb2.TransactionResponse.FromString,
-        )
-    self.GetTB = channel.unary_unary(
-        '/transaction.Transactor/GetTB',
-        request_serializer=transaction__pb2.TBRequest.SerializeToString,
-        response_deserializer=transaction__pb2.TBResponse.FromString,
-        )
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.NodeVersion = channel.unary_unary(
+                '/transaction.Transactor/NodeVersion',
+                request_serializer=transaction__pb2.VersionRequest.SerializeToString,
+                response_deserializer=transaction__pb2.VersionResponse.FromString,
+                )
+        self.AddTransaction = channel.unary_unary(
+                '/transaction.Transactor/AddTransaction',
+                request_serializer=transaction__pb2.TransactionRequest.SerializeToString,
+                response_deserializer=transaction__pb2.TransactionResponse.FromString,
+                )
+        self.DeleteTransaction = channel.unary_unary(
+                '/transaction.Transactor/DeleteTransaction',
+                request_serializer=transaction__pb2.DeleteRequest.SerializeToString,
+                response_deserializer=transaction__pb2.TransactionResponse.FromString,
+                )
+        self.AddTag = channel.unary_unary(
+                '/transaction.Transactor/AddTag',
+                request_serializer=transaction__pb2.TagRequest.SerializeToString,
+                response_deserializer=transaction__pb2.TransactionResponse.FromString,
+                )
+        self.DeleteTag = channel.unary_unary(
+                '/transaction.Transactor/DeleteTag',
+                request_serializer=transaction__pb2.DeleteTagRequest.SerializeToString,
+                response_deserializer=transaction__pb2.TransactionResponse.FromString,
+                )
+        self.AddCurrency = channel.unary_unary(
+                '/transaction.Transactor/AddCurrency',
+                request_serializer=transaction__pb2.CurrencyRequest.SerializeToString,
+                response_deserializer=transaction__pb2.TransactionResponse.FromString,
+                )
+        self.DeleteCurrency = channel.unary_unary(
+                '/transaction.Transactor/DeleteCurrency',
+                request_serializer=transaction__pb2.DeleteCurrencyRequest.SerializeToString,
+                response_deserializer=transaction__pb2.TransactionResponse.FromString,
+                )
+        self.GetTB = channel.unary_unary(
+                '/transaction.Transactor/GetTB',
+                request_serializer=transaction__pb2.TBRequest.SerializeToString,
+                response_deserializer=transaction__pb2.TBResponse.FromString,
+                )
 
 
 class TransactorServicer(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def NodeVersion(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def NodeVersion(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def AddTransaction(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def AddTransaction(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def DeleteTransaction(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def DeleteTransaction(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def AddTag(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def AddTag(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def DeleteTag(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def DeleteTag(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def GetTB(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def AddCurrency(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteCurrency(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetTB(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
 
 def add_TransactorServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'NodeVersion': grpc.unary_unary_rpc_method_handler(
-          servicer.NodeVersion,
-          request_deserializer=transaction__pb2.VersionRequest.FromString,
-          response_serializer=transaction__pb2.VersionResponse.SerializeToString,
-      ),
-      'AddTransaction': grpc.unary_unary_rpc_method_handler(
-          servicer.AddTransaction,
-          request_deserializer=transaction__pb2.TransactionRequest.FromString,
-          response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
-      ),
-      'DeleteTransaction': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteTransaction,
-          request_deserializer=transaction__pb2.DeleteRequest.FromString,
-          response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
-      ),
-      'AddTag': grpc.unary_unary_rpc_method_handler(
-          servicer.AddTag,
-          request_deserializer=transaction__pb2.TagRequest.FromString,
-          response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
-      ),
-      'DeleteTag': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteTag,
-          request_deserializer=transaction__pb2.DeleteTagRequest.FromString,
-          response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
-      ),
-      'GetTB': grpc.unary_unary_rpc_method_handler(
-          servicer.GetTB,
-          request_deserializer=transaction__pb2.TBRequest.FromString,
-          response_serializer=transaction__pb2.TBResponse.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'transaction.Transactor', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
+    rpc_method_handlers = {
+            'NodeVersion': grpc.unary_unary_rpc_method_handler(
+                    servicer.NodeVersion,
+                    request_deserializer=transaction__pb2.VersionRequest.FromString,
+                    response_serializer=transaction__pb2.VersionResponse.SerializeToString,
+            ),
+            'AddTransaction': grpc.unary_unary_rpc_method_handler(
+                    servicer.AddTransaction,
+                    request_deserializer=transaction__pb2.TransactionRequest.FromString,
+                    response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
+            ),
+            'DeleteTransaction': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteTransaction,
+                    request_deserializer=transaction__pb2.DeleteRequest.FromString,
+                    response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
+            ),
+            'AddTag': grpc.unary_unary_rpc_method_handler(
+                    servicer.AddTag,
+                    request_deserializer=transaction__pb2.TagRequest.FromString,
+                    response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
+            ),
+            'DeleteTag': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteTag,
+                    request_deserializer=transaction__pb2.DeleteTagRequest.FromString,
+                    response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
+            ),
+            'AddCurrency': grpc.unary_unary_rpc_method_handler(
+                    servicer.AddCurrency,
+                    request_deserializer=transaction__pb2.CurrencyRequest.FromString,
+                    response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
+            ),
+            'DeleteCurrency': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteCurrency,
+                    request_deserializer=transaction__pb2.DeleteCurrencyRequest.FromString,
+                    response_serializer=transaction__pb2.TransactionResponse.SerializeToString,
+            ),
+            'GetTB': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetTB,
+                    request_deserializer=transaction__pb2.TBRequest.FromString,
+                    response_serializer=transaction__pb2.TBResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'transaction.Transactor', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class Transactor(object):
+    """Missing associated documentation comment in .proto file"""
+
+    @staticmethod
+    def NodeVersion(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/NodeVersion',
+            transaction__pb2.VersionRequest.SerializeToString,
+            transaction__pb2.VersionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def AddTransaction(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/AddTransaction',
+            transaction__pb2.TransactionRequest.SerializeToString,
+            transaction__pb2.TransactionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteTransaction(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/DeleteTransaction',
+            transaction__pb2.DeleteRequest.SerializeToString,
+            transaction__pb2.TransactionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def AddTag(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/AddTag',
+            transaction__pb2.TagRequest.SerializeToString,
+            transaction__pb2.TransactionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteTag(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/DeleteTag',
+            transaction__pb2.DeleteTagRequest.SerializeToString,
+            transaction__pb2.TransactionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def AddCurrency(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/AddCurrency',
+            transaction__pb2.CurrencyRequest.SerializeToString,
+            transaction__pb2.TransactionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteCurrency(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/DeleteCurrency',
+            transaction__pb2.DeleteCurrencyRequest.SerializeToString,
+            transaction__pb2.TransactionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetTB(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/transaction.Transactor/GetTB',
+            transaction__pb2.TBRequest.SerializeToString,
+            transaction__pb2.TBResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)

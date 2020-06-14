@@ -14,9 +14,9 @@ import transaction_pb2_grpc
 def ledger_get_tb(stub, date):
     tb = stub.GetTB(transaction_pb2.TBRequest(date=date))
     for tbline in tb.lines:
-        print("{}: {}".format(tbline.accountname, tbline.amount))
-        for tag in tbline.tags:
-            print("       {}".format(tag))
+        print("{}: {} {}".format(tbline.accountname, tbline.amountStr, tbline.currency))
+        # for tag in tbline.tags:
+            # print("       {}".format(tag))
 
 
 def run():
