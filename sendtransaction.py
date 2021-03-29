@@ -27,9 +27,9 @@ def run():
                     accountname="Cash",
                     description="Some Specifics",
                     amount=1000)
-                ],
-            signature="Not Implemented"
+                ]
             ))
+        print(response)
 
 
 if __name__ == '__main__':
