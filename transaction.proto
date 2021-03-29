@@ -1,16 +1,23 @@
 syntax = "proto3";
 
+option go_package = "github.com/darcys22/godbledger/proto/transaction";
+
 package transaction;
 
 service Transactor {
-  rpc NodeVersion(VersionRequest) returns (VersionResponse) {}
   rpc AddTransaction(TransactionRequest) returns (TransactionResponse) {}
   rpc DeleteTransaction(DeleteRequest) returns (TransactionResponse) {}
-  rpc AddTag(TagRequest) returns (TransactionResponse) {}
-  rpc DeleteTag(DeleteTagRequest) returns (TransactionResponse) {}
+  rpc VoidTransaction(DeleteRequest) returns (TransactionResponse) {}
+  rpc NodeVersion(VersionRequest) returns (VersionResponse) {}
+  rpc AddTag(AccountTagRequest) returns (TransactionResponse) {}
+  rpc DeleteTag(DeleteAccountTagRequest) returns (TransactionResponse) {}
   rpc AddCurrency(CurrencyRequest) returns (TransactionResponse) {}
   rpc DeleteCurrency(DeleteCurrencyRequest) returns (TransactionResponse) {}
   rpc GetTB(TBRequest) returns (TBResponse) {}
+  rpc GetListing(ReportRequest) returns (ListingResponse) {}
+  rpc AddAccount(AccountTagRequest) returns (TransactionResponse) {}
+  rpc DeleteAccount(DeleteAccountTagRequest) returns (TransactionResponse) {}
+  rpc ReconcileTransactions(ReconciliationRequest) returns (TransactionResponse) {}
 }
 
 message LineItem {
@@ -20,43 +27,43 @@ message LineItem {
   int64 amount = 4;
 }
 
+message Transaction {
+    string date = 1;
+    string description = 2;
+    repeated LineItem lines = 3;
+}
+
 message TransactionRequest {
     string date = 1;
     string description = 2;
     repeated LineItem lines = 3;
-    string signature = 4;
 }
 
 message DeleteRequest {
     string identifier = 1;
-    string signature = 2;
 }
 
 message TransactionResponse {
     string message = 1;
 }
 
-message TagRequest {
+message AccountTagRequest {
     string account = 1;
-    string tag = 2;
-    string signature = 3;
+    repeated string tag = 2;
 }
 
-message DeleteTagRequest {
+message DeleteAccountTagRequest {
     string account = 1;
-    string tag = 2;
-    string signature = 3;
+    repeated string tag = 2;
 }
 
 message CurrencyRequest {
     string currency = 1;
     int64 decimals = 2;
-    string signature = 3;
 }
 
 message DeleteCurrencyRequest {
     string currency = 1;
-    string signature = 2;
 }
 
 message TBLine {
@@ -71,9 +78,21 @@ message TBLine {
 message TBRequest {
     string date = 1;
 }
+message ReportRequest {
+    string date = 1;
+    string startdate = 2;
+}
 
 message TBResponse {
     repeated TBLine lines = 1;
+}
+
+message ListingResponse {
+    repeated Transaction transactions = 1;
+}
+
+message ReconciliationRequest {
+    repeated string splitID = 1;
 }
 
 message VersionRequest {
